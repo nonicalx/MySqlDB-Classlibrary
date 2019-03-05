@@ -13,8 +13,9 @@ namespace Tester
         {
             MySqlDB mySqlDB = new MySqlDB();
 
-   
-            mySqlDB.Delete(4);
+
+            Console.WriteLine(mySqlDB.Count());
+            Console.ReadKey();
         }
     }
 }

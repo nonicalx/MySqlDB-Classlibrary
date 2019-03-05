@@ -132,6 +132,10 @@ namespace Sql_DBconnector
             }
         }
 
+        /// <summary>
+        /// Selects all data on the table saves it in a list
+        /// </summary>
+        /// <returns></returns>
         public List<string>[] Select()
         {
             string query = "SELECT * FROM Members";
@@ -175,6 +179,10 @@ namespace Sql_DBconnector
             }
         }
 
+        /// <summary>
+        /// Counts the number of rows in the database.
+        /// </summary>
+        /// <returns></returns>
         public int Count()
         {
             string query = "SELECT Count(*) From Members";
