@@ -13,8 +13,15 @@ namespace Tester
         {
             MySqlDB mySqlDB = new MySqlDB();
 
+            var table = mySqlDB.Select();
+            int id = 4;
+            string first = "leggo";
+            string last = "Naija";
+            string email = "NJ@yaho.com";
+            int phone = 08902445;
+            string passw = "jamess";
 
-            Console.WriteLine(mySqlDB.Count());
+            mySqlDB.Insert(first,last,email,phone,passw);
             Console.ReadKey();
         }
     }

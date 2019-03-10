@@ -78,9 +78,9 @@ namespace Sql_DBconnector
             }
         }
 
-        public void Insert()
+        public void Insert(string firstname, string lastname, string email, int phoneNumber, string password)
         {
-            string query = "INSERT INTO Members (firstname, lastname, email, phoneNumber, password) VALUES('chukwudubem', 'smith', 'dubem@yahoo.com', '0904567643', '123qwwerre')";
+            string query = $"INSERT INTO Members (firstname, lastname, email, phoneNumber, password) VALUES('{firstname}', '{lastname}', '{email}', '{phoneNumber}', '{password}')";
 
             if (this.OpenConnection() == true)
             {
@@ -133,7 +133,7 @@ namespace Sql_DBconnector
         }
 
         /// <summary>
-        /// Selects all data on the table saves it in a list
+        /// Selects all data on the table and saves it in a list.
         /// </summary>
         /// <returns></returns>
         public List<string>[] Select()
